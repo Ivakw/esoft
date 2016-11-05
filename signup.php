@@ -2,7 +2,7 @@
 
 include_once('config.php');
 include_once('bl/user.bl.php');
-
+include_once('utility/utility.php');
 
 $error_messages = [
   'first_name'=>'First Name cannot be left blank',
@@ -15,6 +15,9 @@ $error_messages = [
 
 if(isset($_POST['btn_submit'])){
 
+  
+ 
+
   $message = [];
   foreach($error_messages as $error_key=>$error_value){
 
@@ -24,8 +27,12 @@ if(isset($_POST['btn_submit'])){
     
   }
   if(empty($message)){
-    $is_success = create_user($_POST);
-    $message['new_user_added'] = ($is_success)?"New user has beed added to the system":"";
+    $insert = create_user($_POST);
+    if($insert > 0 ){
+      content_upload($_FILES['profile_image'],'profile/'.$insert);
+      $message['new_user_added'] = ($is_success)?"New user has beed added to the system":"";
+    }
+    
   }
 }
 
@@ -40,7 +47,7 @@ include_once('includes/header.php'); ?>
 <body>
 
 <div class="container">  
-  <form id="contact" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+  <form id="contact" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
     <h3>Colorlib Contact Form</h3>
     <h4>Contact us for custom quote</h4>
     <?php echo (isset($message['new_user_added']))?$message['new_user_added']:"" ?> 

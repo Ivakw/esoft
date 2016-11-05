@@ -5,7 +5,7 @@ ini_set('display_startup_errors', TRUE);
 
 define('SITE_PATH',$_SERVER['SERVER_NAME']);
 define('RESOURCE_PATH', SITE_PATH.'/resources/' );
-define('IMAGE_UPLOAD_PHYSICAL_PATH',__DIR__ );
+define('IMAGE_UPLOAD_PHYSICAL_PATH',__DIR__ .'/resources/');
 
 
 //DATABASE CONFIGURATIONS

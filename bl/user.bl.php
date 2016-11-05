@@ -20,7 +20,10 @@ function create_user($data){
         VALUES
           ('{$first_name}','{$last_name}','{$password}','{$user_name}','{$profile_image}','{$current_date}')  
           ";
-   	$result  = db_query_method2($insert_query);
-	return $result;
+   	$result  = insert($insert_query);
+
+
+
+	return get_last_insert_id();
   
 }

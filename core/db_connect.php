@@ -71,3 +71,18 @@ function db_query_method2($query){
 	
 }
 
+/**
+ * Get Last inserted ID 
+ */
+function insert($query){
+	$connect = db_connect();
+	$reusls = $connect->query($query);
+
+	if($reusls){
+		return $connect->insert_id;
+	}else{
+		//LOG THEM IN STATIC FILE OR LOG FILE
+	 	die($connect->errno.'   '. $connect->error);
+	}
+}
+
