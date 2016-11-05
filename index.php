@@ -1,24 +1,21 @@
-<html>
+<?php 
 
-<head>
+include_once('config.php');
+include_once('core/db_connect.php');
 
-<?php
 
-if(isset($_POST['btn_submit'])){
 
-    print_r($_POST);
-   
-}
+
+
+
+
+
 
 ?>
+<?php
+include_once('includes/header.php'); ?>
 
-
-
-
-
-
-<link rel="stylesheet" type="text/css" href="/css/style.css">
-</head>
+<?php echo IMAGE_UPLOAD_PHYSICAL_PATH  ?>
 <body>
 
 <div class="container">  
@@ -41,5 +38,10 @@ if(isset($_POST['btn_submit'])){
     </fieldset>
   </form>
 </div>
+
+<?php include_once('includes/footer.php'); ?>
+
 </body>
+
+
 </html>
