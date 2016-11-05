@@ -30,7 +30,7 @@ if(isset($_POST['btn_submit'])){
     $insert = create_user($_POST);
     if($insert > 0 ){
       content_upload($_FILES['profile_image'],'profile/'.$insert);
-      $message['new_user_added'] = ($is_success)?"New user has beed added to the system":"";
+      $message['new_user_added'] = "New user has beed added to the system";
     }
     
   }

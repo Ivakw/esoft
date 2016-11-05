@@ -23,7 +23,7 @@ function create_user($data){
    	$result  = insert($insert_query);
 
 
-
-	return get_last_insert_id();
+    return $result;
+	
   
 }
