@@ -58,23 +58,13 @@ function data_query($query){
 function db_query_method2($query){
 	$connect = db_connect();
 	$reusls = $connect->query($query);
-	return $reusls;
+
+	if($reusls){
+		return $reusls;
+	}else{
+		//LOG THEM IN STATIC FILE OR LOG FILE
+	 	die($connect->errno.'   '. $connect->error);
+	}
+	
 }
 
-
-
-
-/*
-$resutl= data_query('SELECT * FROM users');
-$datas = fetch_array($resutl);
-print_r($datas);
-*/
-
-$results = db_query_method2('SELECT * FROM users');
-
-while($row = $results->fetch_assoc()){
-	echo "</br>".$row['first_name']." ". $row['last_name'];
-}
-
-
-die;
