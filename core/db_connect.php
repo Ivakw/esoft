@@ -55,6 +55,9 @@ function data_query($query){
  * 					Method 2
  ***************************************************/
 
+/**
+ * Execute DB Query to the with the database
+ */
 function db_query_method2($query){
 	$connect = db_connect();
 	$reusls = $connect->query($query);

@@ -1,7 +1,7 @@
 <?php 
 
 include_once('config.php');
-include_once('core/db_connect.php');
+include_once('bl/user.bl.php');
 
 
 $error_messages = [
@@ -23,32 +23,10 @@ if(isset($_POST['btn_submit'])){
     }
     
   }
-
   if(empty($message)){
-    
-
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $password = $_POST['password'];
-    $user_name = $_POST['user_name'];
-    $profile_image = 'test.jpeg';
-    $current_date = date('Y-m-d H:i:s');
-
-    $insert_query = "
-        INSERT INTO users 
-          (`first_name`,`last_name`,`password`,`user_name`,`profile_image`,`created_at`)
-        VALUES
-          ('{$first_name}','{$last_name}','{$password}','{$user_name}','{$profile_image}','{$current_date}')  
-          ";
-   $result  = db_query_method2($insert_query);
-
-   if($result){
-      $message['new_user_added'] = "New user created";
-   }
-  
+    $is_success = create_user($_POST);
+    $message['new_user_added'] = ($is_success)?"New user has beed added to the system":"";
   }
-  
-
 }
 
 
