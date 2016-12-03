@@ -21,4 +21,9 @@ class UserModel extends \Core\DBConnect{
 
     }
 
+    public function createNewUser($user = []){
+
+        return $this->insert($user);
+    } 
+
 }

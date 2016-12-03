@@ -56,6 +56,25 @@ class DBConnect {
 
     }
 
+    public function insert($data = []){
+
+        $query = "INSERT INTO ".$this->table_name;
+        $_columns = "";
+        $_values = "";
+        $index = 1;
+        foreach($data as $column_name=>$value){
+            $_columns   .= (count($data) > $index)? " $column_name ,":$column_name;
+            $_values    .= (count($data) > $index)? "'{$value}',":"'{$value}'"; 
+            $index++;
+        }
+
+        $query = $query."(".$_columns.")"." VALUES ( {$_values} )" ;
+        
+        $this->connection->query($query);
+        return  $this->connection->insert_id;
+
+    }
+
 
 
 }
