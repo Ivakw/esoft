@@ -47,8 +47,12 @@ class DBConnect {
 
         $query = "SELECT {$_columns} FROM ".$this->table_name;
         $query .= " ".$_where;
-
-       return $this->connection->query($query)->fetch_array();
+        $result = $this->connection->query($query);
+        $out = [];
+        while($row =$result->fetch_assoc() ){
+            $out[] = $row;
+        }
+       return $out;
 
     }
 
