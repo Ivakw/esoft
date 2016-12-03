@@ -1,8 +1,11 @@
 <?php
 require_once './config.php';
-require_once './core/DBConnect.php';
-//require_once './db/DBConnect.php';
 
-$dbCon =  new Core\DBConnect();
+require_once './models/user.model.php';
 
-echo $dbCon->connect();
+
+$user =  new Models\UserModel();
+
+$users =  $user->getUsers();
+echo "<pre>";
+print_r($users);
