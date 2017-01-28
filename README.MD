@@ -27,3 +27,36 @@ Remove Folder
 
     $ rm -rf <Location of the folder> 
 
+
+Copy content 
+
+    $ cp <start location> <destination>
+    $ cp text1.txt /web/test/abc
+
+Rename file and direcotry
+
+    $ mv <original file name> <new file name>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
