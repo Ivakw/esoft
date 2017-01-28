@@ -23,5 +23,7 @@ List content inside the direcotry
     $ ls -al
 
 
+Remove Folder 
 
+    $ rm -rf <Location of the folder> 
 
