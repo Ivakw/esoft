@@ -145,7 +145,9 @@ $ cut -d " " -f1 command_history.txt
 $ cut -c1-100 command_history.txt
 
 
+#tr filter 
 
+$ tr "[a-z]" "[A-Z]" command_history.txt 
 
 
 
