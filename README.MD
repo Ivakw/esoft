@@ -97,3 +97,58 @@ dd - Delete line
 <Ctrl> F - One page Forward
 <Ctrl> B - One page backword
 
+
+
+# Redirections
+
+There 3 Redirections
+1 - Input -Discriptor 0 
+2 - Output- Discriptor 1
+3 - Error - Discriptor 2
+
+Standard Input Redirectoin
+
+$ cat < text.txt
+$ cat 0< text.txt
+
+Standard Output redirection
+$ history 1> commands
+
+Satndard Error redirection
+
+$ asdklaskdasl 2> error
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
