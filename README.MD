@@ -124,7 +124,7 @@ $ asdklaskdasl 2> error
 grep <pattern> <file name>
 
 $ grep "npm [i-q]" command_history.txt
-$ grep "npm ^[i,s,r]" command_history.txt
+$ grep "^npm [si]" command_history.txt
 $ grep "npm [run]" command_history.txt
 
 
@@ -137,7 +137,12 @@ $ wc -l command_history.txt
 $ wc -w command_history.txt
 $ wc -c command_history.txt
 
+#cut filter
 
+cut <option> <file name>
+
+$ cut -d " " -f1 command_history.txt
+$ cut -c1-100 command_history.txt
 
 
 
