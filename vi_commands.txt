@@ -1,0 +1,31 @@
+Vi Editor
+------------
+There are 3 mode in Vi edotor
+
+Command mode
+Input/ Insert mode
+Escape Mode
+
+Vi Commands 
+------------
+:wq - Save all changes and Exit
+:q! - Exit without save
+:w <file name>  - Write to deferent file
+:! - Execute shell command
+
+h - Move cursor to previous character
+l - Move cursor to next character
+k - Move cursor to up line
+j - Move cursor to down line
+x - Delete character as current curser
+dd - Delete line
+
+Corsor commands
+---------------
+<Ctrl> d or D - Scrol down half screen
+<Ctrl> u or U - Scrol up half screen
+<Ctrl> F - One page Forward
+<Ctrl> B - One page backword
+
+
+
