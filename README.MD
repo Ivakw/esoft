@@ -147,9 +147,11 @@ $ cut -c1-100 command_history.txt
 
 #tr filter 
 
-$ tr "[a-z]" "[A-Z]" command_history.txt 
+$ tr "[a-z]" "[A-Z]" < command_history.txt 
 
+#Command Pips
 
+$ ls -al | cut -c-10
 
 
 
