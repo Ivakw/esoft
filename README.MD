@@ -119,12 +119,23 @@ Satndard Error redirection
 $ asdklaskdasl 2> error
 
 
+#Grep Filter
+
+grep <pattern> <file name>
+
+$ grep "npm [i-q]" command_history.txt
+$ grep "npm ^[i,s,r]" command_history.txt
+$ grep "npm [run]" command_history.txt
 
 
+#wc filter
 
+wc <option> <file name>
 
-
-
+$ wc command_history.txt
+$ wc -l command_history.txt
+$ wc -w command_history.txt
+$ wc -c command_history.txt
 
 
 
