@@ -154,6 +154,17 @@ $ tr "[a-z]" "[A-Z]" < command_history.txt
 $ ls -al | cut -c-10
 
 
+#Variables
+Declare Variable 
+
+    fName
+
+Use Declared Variables
+
+    $fName
+
+
+
 
 
 
