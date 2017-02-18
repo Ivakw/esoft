@@ -163,6 +163,66 @@ Use Declared Variables
 
     $fName
 
+##Numbers in shell
+
+All the input variables are taking as String inorder to do the Erithmetic operations 
+this string(s) need to be converted as Number. expr command can be used for this as fillows
+
+    echo `expr $num + $num2`
+or
+
+    echo $(($num1 * $num2))
+
+
+##Erithmetic operations
+    
+    $((expression))
+    $(( n1+n2 ))
+    $(( n1/n2 ))
+    $(( n1-n2 ))
+
+Examples
+Add two numbers on fly using the echo command:
+
+    echo $(( 10 + 5 ))
+Add two numbers using x and y variable. Create a shell program called add.sh using a text editor:
+
+    #!/bin/bash
+    x=5
+    y=10
+    ans=$(( x + y ))
+    echo "$x + $y = $ans"
+
+##Order of Precedence
+Operators are evaluated in order of precedence. The levels are listed in order of decreasing precedence (quoting form the bash man page).
+
+       id++ id--
+              variable post-increment and post-decrement
+       ++id --id
+              variable pre-increment and pre-decrement
+       - +    unary minus and plus
+       ! ~    logical and bitwise negation
+       **     exponentiation
+       * / %  multiplication, division, remainder
+       + -    addition, subtraction
+       << >>  left and right bitwise shifts
+       <= >= < >
+              comparison
+       == !=  equality and inequality
+       &      bitwise AND
+       ^      bitwise exclusive OR
+       |      bitwise OR
+       &&     logical AND
+       ||     logical OR
+       expr?expr:expr
+              conditional operator
+       = *= /= %= += -= <<= >>= &= ^= |=
+              assignment
+       expr1 , expr2
+              comma
+    
+
+
 
 
 
